@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ps" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rohani Computer Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div><h1>Rohani Computer Shop</h1><p>د کمپیوټر، لپټاپ او لوازمو دوکان</p></div>
+<nav><button onclick="show('home')">کور</button><button onclick="show('products')">محصولات</button><button onclick="show('sales')">خرڅلاو</button><button onclick="show('customers')">مشتریان</button><button onclick="show('reports')">راپورونه</button></nav></header>
+<main>
+<section id="home" class="page"><div class="hero"><h2>Rohani Computer Shop ته ښه راغلاست</h2><p>خپل محصولات، خرڅلاو، مشتریان او عاید په یوه ځای کې تنظیم کړئ.</p><button class="primary" onclick="show('products')">محصولات وګورئ</button></div>
+<div class="cards"><div><b id="pc">0</b><span>محصولات</span></div><div><b id="sc">0</b><span>خرڅلاو</span></div><div><b id="cc">0</b><span>مشتریان</span></div><div><b id="rev">0</b><span>ټول خرڅلاو (؋)</span></div></div></section>
+<section id="products" class="page hidden"><h2>محصولات / Products</h2><form id="productForm"><input id="pname" placeholder="د محصول نوم" required><input id="pprice" type="number" placeholder="قیمت (؋)" required><input id="pqty" type="number" placeholder="مقدار" required><button>محصول اضافه کړه</button></form><div id="productList" class="list"></div></section>
+<section id="sales" class="page hidden"><h2>خرڅلاو / Sales</h2><form id="saleForm"><input id="sproduct" placeholder="محصول" required><input id="sprice" type="number" placeholder="قیمت (؋)" required><input id="sqty" type="number" placeholder="مقدار" value="1" required><input id="scustomer" placeholder="مشتری"><button>خرڅلاو ثبت کړه</button></form><div id="saleList" class="list"></div></section>
+<section id="customers" class="page hidden"><h2>مشتریان / Customers</h2><form id="customerForm"><input id="cname" placeholder="د مشتری نوم" required><input id="cphone" placeholder="د موبایل شمېره"><button>مشتری اضافه کړه</button></form><div id="customerList" class="list"></div></section>
+<section id="reports" class="page hidden"><h2>راپورونه / Reports</h2><div class="report"><p>ټول محصولات: <b id="rproducts">0</b></p><p>ټول خرڅلاو: <b id="rsales">0</b> ؋</p><p>ټول مشتریان: <b id="rcustomers">0</b></p></div><button onclick="backup()">💾 Backup ډاونلوډ</button><button onclick="clearData()">🗑️ ټول معلومات پاکول</button></section>
+</main>
+<footer>© 2026 Rohani Computer Shop — Offline Web App</footer>
+<script src="app.js"></script>
+</body></html>
